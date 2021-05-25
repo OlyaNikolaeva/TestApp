@@ -24,9 +24,9 @@ namespace TestApp
 
         public double[] GetDis()
         {
-            var d1 = TimeA * V;
+            var d1 = TimeA * V ;
             var d2 = TimeB * V;
-            var d3 = TimeC * V;
+            var d3 = TimeC * V ;
             double[] d = { d1, d2, d3 };
             return d;
         }

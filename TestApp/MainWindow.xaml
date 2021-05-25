@@ -12,32 +12,20 @@
             <Border.Effect>
                 <DropShadowEffect BlurRadius="60" Color="LightGray" ShadowDepth="0" />
             </Border.Effect>
-            <StackPanel>
+            <StackPanel >
                 <TextBlock Text="Radio Transmitter " FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
 
-                <TextBox x:Name="tranNumber" materialDesign:HintAssist.Hint="Введите кол-во измерений (n):" Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
-                <Grid Margin="0 0 0 20">
-                    <TextBlock HorizontalAlignment="Left" Text="Введите координаты 1-ого приемника (А):" />
-                    <TextBox HorizontalAlignment="Right" x:Name="firstX" materialDesign:HintAssist.Hint="x1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,120,-0.333" Width="132" />
-                    <TextBox HorizontalAlignment="Right" x:Name="firstY" materialDesign:HintAssist.Hint="y1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,-0.333" Width="105" />
-                </Grid>
-                <Grid Margin="0 0 0 20">
-                    <TextBlock HorizontalAlignment="Left" Text="Введите координаты 2-ого приемника (B):" />
-                    <TextBox HorizontalAlignment="Right" x:Name="secondX" materialDesign:HintAssist.Hint="x2:" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,120,-0.333" Width="132" />
-                    <TextBox HorizontalAlignment="Right" x:Name="secondY" materialDesign:HintAssist.Hint="y2:" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,-0.333" Width="105" />
-                </Grid>
-                <Grid Margin="0 0 0 20">
-                    <TextBlock HorizontalAlignment="Left" Text="Введите координаты 3-ого приемника (C):" />
-                    <TextBox HorizontalAlignment="Right" x:Name="thirdX" materialDesign:HintAssist.Hint="x3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,120,-0.333" Width="132"/>
-                    <TextBox HorizontalAlignment="Right" x:Name="thirdY" materialDesign:HintAssist.Hint="y3" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,0,10,-0.333" Width="105" />
-                </Grid>
-                
-                <Grid Margin="0 0 0 20">
-                    <Button HorizontalAlignment="Left" Content="Ok" Click="Button_Reg_Click"/>
-                    
+                <Grid Margin="0,0,0,0" x:Name="startGrid" >
+                    <TextBox HorizontalAlignment="Left" Height="50" Margin="30,10,0,0" TextWrapping="Wrap"   
+                 Text="Path file..." VerticalAlignment="Top" Width="250" Name="FileNameTextBox"/>
+                    <Button x:Name="BrowseButton" Content="Browse a file" HorizontalAlignment="Left"   
+                Margin="330,20,0,0" VerticalAlignment="Top" Width="120" Click="BrowseButton_Click"   
+                RenderTransformOrigin="1.047,0.821" Height="40"/>
+                    <TextBlock HorizontalAlignment="Left"  Margin="30,90,0,0"   
+                   TextWrapping="Wrap"  VerticalAlignment="Top"  
+                    Name="TextBlock1"/>
                 </Grid>
             </StackPanel>
         </Border>
-
     </Grid>
 </Window>
